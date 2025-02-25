@@ -135,3 +135,23 @@ else:
 tf = float(input())
 tc = (5 * (tf - 32)) / 9
 print(tc)
+
+#Dog age 🐶
+a = float(input())
+if a <= 2:
+    print(a * 10.5)
+else:
+    a = 21 + (a -2) *4
+    print(a)
+
+#Дробная часть
+
+a = float(input())
+print(a - int(a))
+
+#Наибольшее и наименьшее
+a1, a2, a3, a4, a5 = int(input()), int(input()), int(input()), int(input()), int(input())
+
+print('Наименьшее число =', min(a1, a2, a3, a4, a5))
+print('Наибольшее число =', max(a1, a2, a3, a4, a5))
+

@@ -155,3 +155,33 @@ a1, a2, a3, a4, a5 = int(input()), int(input()), int(input()), int(input()), int
 print('Наименьшее число =', min(a1, a2, a3, a4, a5))
 print('Наибольшее число =', max(a1, a2, a3, a4, a5))
 
+#Сортировка трёх 🔀🌶️
+a, b, c = int(input()), int(input()), int(input())
+print(max(a, b, c))
+print(a + b + c - min(a, b, c) - max(a, b, c))
+print(min(a, b, c))
+
+#Интересное число 🤔
+x = int(input())
+a = x % 10
+b = x // 10 % 10
+c = x // 100
+if a + b + c == 2 * max(a, b, c):
+    print("Число интересное")
+else:
+    print("Число неинтересное")
+
+#Абсолютная сумма
+
+a1, a2, a3, a4, a5 = float(input()), float(input()), float(input()), float(input()), float(input())
+a1, a2, a3, a4, a5 = abs(a1), abs(a2), abs(a3), abs(a4), abs(a5)
+print(a1 + a2 + a3 + a4 + a5)
+
+#Манхэттенское расстояние ↔️
+
+p1 = int(input())
+p2 = int(input())
+q1 = int(input())
+q2 = int(input())
+
+print(abs(p1 - q1) + abs(p2 - q2))

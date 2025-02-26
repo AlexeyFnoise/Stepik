@@ -112,6 +112,7 @@
 # else:
 #     print('NO')
 #
+from gettext import lngettext
 
 #Площадь треугольника
 a, b = float(input()), float(input())
@@ -186,4 +187,10 @@ q1 = int(input())
 q2 = int(input())
 
 print(abs(p1 - q1) + abs(p2 - q2))
+
+#Длина строки
+a = str(input())
+print('Футбольная команда ' + a + 'имеет длину ' + str(len(a)) + ' символов')
+
+
 

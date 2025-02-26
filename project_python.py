@@ -114,6 +114,8 @@
 #
 from gettext import lngettext
 
+from coverage.misc import output_encoding
+
 #Площадь треугольника
 a, b = float(input()), float(input())
 s = (a * b) / 2
@@ -224,6 +226,12 @@ else:
 #Цвет настроения синий 🟦
 s = input()
 if 'синий' in s:
+    print('YES')
+else:
+    print('NO')
+
+d = input()
+if '@' in d and '.' in d:
     print('YES')
 else:
     print('NO')

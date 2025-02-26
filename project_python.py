@@ -192,5 +192,39 @@ print(abs(p1 - q1) + abs(p2 - q2))
 a = str(input())
 print('Футбольная команда ' + a + 'имеет длину ' + str(len(a)) + ' символов')
 
+#Три города 🏙️
+s1, s2, s3 = input(), input(), input()
+m = min(len(s1), len(s2), len(s3))
+m2 = max(len(s1), len(s2), len(s3))
+if m == len(s1):
+    m = s1
+elif m == len(s2):
+    m = s2
+else:
+    m = s3
+if m2 == len(s1):
+    m2 = s1
+elif m2 == len(s2):
+    m2 = s2
+else:
+    m2 = s3
+print(m, m2, sep='\n')
 
+#Арифметические строки 🌶️
+
+a, b, c = len(input()), len(input()), len(input())
+max1 = max(a, b, c)
+min1 = min(a, b, c)
+sr = a + b + c - max1 - min1
+if max1 - sr == sr - min1:
+    print('YES')
+else:
+    print('NO')
+
+#Цвет настроения синий 🟦
+s = input()
+if 'синий' in s:
+    print('YES')
+else:
+    print('NO')
 

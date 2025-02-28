@@ -236,3 +236,28 @@ if '@' in d and '.' in d:
 else:
     print('NO')
 
+#Площадь и длина
+r = float(input())
+from math import pi, radians
+
+s = pi * r ** 2
+c = 2 * pi * r
+print(s, c, sep='\n')
+
+#Средние значения
+a, b = float(input()), float(input())
+from math import sqrt
+
+a1 = (a + b) / 2
+g1 = sqrt(a * b)
+gar = (2 * a * b) / (a + b)
+kvadr = sqrt((a ** 2 + b ** 2) / 2)
+print(a1, g1, gar, kvadr, sep='\n')
+
+#Тригонометрическое выражение
+import math
+x = float(input())
+x = math.radians(x) #Тригонометрические функции принимают аргумент в радианах.
+# Чтобы перевести градусы в радианы, воспользуйтесь формулой
+tr = math.sin(x) + math.cos(x) + math.tan(x) ** 2
+print(tr)

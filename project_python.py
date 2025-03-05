@@ -283,3 +283,25 @@ elif d > 0:
     x2 = (-(b) + d ** 0.5) / (2 * a)
     print(min(x1, x2))
     print(max(x1, x2))
+
+#   Правильный многоугольник 🔶
+n, a = int(input()), float(input())
+from math import pi, tan
+print((n * a ** 2) / (4 * tan(pi / n)))
+
+#   Python is awesome 🐍 цик for
+
+#   for название_переменной_цикла in range(количество_повторений):
+#       блок кода
+for i in range(10):
+    print('Python is awesome!')
+
+#   Последовательность символов
+for i in range(6):
+    print('AAA')
+for i in range(5):
+    print('BBBB')
+print('E')
+for i in range(9):
+    print('TTTTT')
+print('G')

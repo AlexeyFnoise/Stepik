@@ -305,3 +305,18 @@ print('E')
 for i in range(9):
     print('TTTTT')
 print('G')
+
+#   Повторяй за мной 1
+s = input()
+r = int(input())
+for i in range(r):
+    print(s)
+
+#   Звёздный прямоугольник ⭐
+for i in range(int(input())):
+    print("*******************")
+
+#   Повторяй за мной 2
+a = input()
+for i in range(10):
+    print(i, a)

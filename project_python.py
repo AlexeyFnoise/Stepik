@@ -320,3 +320,21 @@ for i in range(int(input())):
 a = input()
 for i in range(10):
     print(i, a)
+
+#   Квадрат числа
+for i in range(int(input()) + 1):
+    print('Квадрат числа', i, 'равен', i ** 2)
+
+#   Звёздный треугольник ⭐
+n = int(input())
+for i in range(n):
+    print('*' * n)
+    n = n - 1
+
+#   Популяция 🦠
+m, p, n, = int(input()), int(input()), int(input())
+for i in range(n):
+    print(i + 1, m)
+    m = m + (m * (p / 100))
+
+

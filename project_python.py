@@ -1,117 +1,122 @@
-##Проверка рулетки
-a = int(input())
-if a < 0 or a > 36:
-    print('ошибка ввода')
-elif a == 0:
-    print('зеленый')
-else:
-    if (a % 2 == 0) and (1 <= a <= 10 or 19 <= a <= 28):
-        print('черный')
-    elif (a % 2 == 0) and (11 <= a <= 18 or 29 <= a <= 36):
-        print('красный')
-    else:
-        if a % 2 != 0 and (11 <= a <= 18 or 28 <= a <= 36):
-            print('черный')
-        elif (a % 2 != 0) and (1 <= a <= 10 or 19 <= a <= 28):
-            print('красный')
+# ##Проверка рулетки
+# a = int(input())
+# if a < 0 or a > 36:
+#     print('ошибка ввода')
+# elif a == 0:
+#     print('зеленый')
+# else:
+#     if (a % 2 == 0) and (1 <= a <= 10 or 19 <= a <= 28):
+#         print('черный')
+#     elif (a % 2 == 0) and (11 <= a <= 18 or 29 <= a <= 36):
+#         print('красный')
+#     else:
+#         if a % 2 != 0 and (11 <= a <= 18 or 28 <= a <= 36):
+#             print('черный')
+#         elif (a % 2 != 0) and (1 <= a <= 10 or 19 <= a <= 28):
+#             print('красный')
+#
+# ## Проверка отрезков
+# a1 = int(input())
+# b1 = int(input())
+# a2 = int(input())
+# b2 = int(input())
+# if a2 > b1 or a1 > b2:  # отсекаем отсутствие пересечений и общей точки
+#     print('пустое множество')
+# elif a1 == b2:  # первое условие общей точки
+#     print(a1)
+# elif a2 == b1:  # второе условие общей точки
+#     print(a2)
+# else:  # осталось найти только пересечение
+#     if a1 > a2:  # получаем первую точку пересечения путем отсечения лишней точки
+#         a2 = a1
+#     if b1 < b2:  # получаем вторую точку пересечения
+#         b2 = b1
+#     print(a2, b2)
+#
+# ##Начало столетия
+# s = int(input())
+# b = s % 10
+# g = s % 100 // 10
+# if b == 0 and g == 0:
+#     print('YES')
+# else:
+#     print('NO')
+#
+# ##Шахматная доска
+#
+# x1, y1, x2, y2 = int(input()), int(input()), int(input()), int(input())
+# if (x1 + y1 + x2 + y2) % 2 == 0:
+#     print('YES')
+# else:
+#     print('NO')
+#
+# # Римские цифры
+# a = int(input())
+# if a == 1:
+#     print('I')
+# elif a == 2:
+#     print('II')
+# elif a == 3:
+#     print('III')
+# elif a == 4:
+#     print('IV')
+# elif a == 5:
+#     print('V')
+# elif a == 6:
+#     print('VI')
+# elif a == 7:
+#     print('VII')
+# elif a == 8:
+#     print('VIII')
+# elif a == 9:
+#     print('IX')
+# elif a == 10:
+#     print('X')
+# else:
+#     print('ошибка')
+#
+# ##YES or NO – вот в чём вопрос ❓
+# a = int(input())
+# if a % 2 != 0:
+#     print('YES')
+# else:
+#     if 2 <= a <= 5:
+#         print('NO')
+#     elif 6 <= a <= 20:
+#         print('YES')
+#     elif a > 20:
+#         print('NO')
+#
+# #Ход слона ♗🌶️
+# x1, y1, x2, y2 = int(input()), int(input()), int(input()), int(input())
+#
+# if (x1 - y1 == x2 - y2) or (x1 + y1 == x2 + y2):
+#     print('YES')
+# else:
+#     print('NO')
+#
+# #Ход коня
+# x1, y1, x2, y2 = int(input()), int(input()), int(input()), int(input())
+# if (x1 - x2) ** 2 + (y1 - y2) ** 2 == 5:
+#     print("YES")
+# else:
+#     print("NO")
+#
+# #Ход ферзя
+# x1 = int(input())
+# y1 = int(input())
+# x2 = int(input())
+# y2 = int(input())
+# if abs(x1 - x2) == abs(y1 - y2) or x1 == x2 or y1 == y2:
+#     print('YES')
+# else:
+#     print('NO')
+#
+from gettext import lngettext
 
-## Проверка отрезков
-a1 = int(input())
-b1 = int(input())
-a2 = int(input())
-b2 = int(input())
-if a2 > b1 or a1 > b2:  # отсекаем отсутствие пересечений и общей точки
-    print('пустое множество')
-elif a1 == b2:  # первое условие общей точки
-    print(a1)
-elif a2 == b1:  # второе условие общей точки
-    print(a2)
-else:  # осталось найти только пересечение
-    if a1 > a2:  # получаем первую точку пересечения путем отсечения лишней точки
-        a2 = a1
-    if b1 < b2:  # получаем вторую точку пересечения
-        b2 = b1
-    print(a2, b2)
+from coverage.misc import output_encoding
 
-##Начало столетия
-s = int(input())
-b = s % 10
-g = s % 100 // 10
-if b == 0 and g == 0:
-    print('YES')
-else:
-    print('NO')
-
-##Шахматная доска
-
-x1, y1, x2, y2 = int(input()), int(input()), int(input()), int(input())
-if (x1 + y1 + x2 + y2) % 2 == 0:
-    print('YES')
-else:
-    print('NO')
-
-# Римские цифры
-a = int(input())
-if a == 1:
-    print('I')
-elif a == 2:
-    print('II')
-elif a == 3:
-    print('III')
-elif a == 4:
-    print('IV')
-elif a == 5:
-    print('V')
-elif a == 6:
-    print('VI')
-elif a == 7:
-    print('VII')
-elif a == 8:
-    print('VIII')
-elif a == 9:
-    print('IX')
-elif a == 10:
-    print('X')
-else:
-    print('ошибка')
-
-##YES or NO – вот в чём вопрос ❓
-a = int(input())
-if a % 2 != 0:
-    print('YES')
-else:
-    if 2 <= a <= 5:
-        print('NO')
-    elif 6 <= a <= 20:
-        print('YES')
-    elif a > 20:
-        print('NO')
-
-#Ход слона ♗🌶️
-x1, y1, x2, y2 = int(input()), int(input()), int(input()), int(input())
-
-if (x1 - y1 == x2 - y2) or (x1 + y1 == x2 + y2):
-    print('YES')
-else:
-    print('NO')
-
-#Ход коня
-x1, y1, x2, y2 = int(input()), int(input()), int(input()), int(input())
-if (x1 - x2) ** 2 + (y1 - y2) ** 2 == 5:
-    print("YES")
-else:
-    print("NO")
-
-#Ход ферзя
-x1 = int(input())
-y1 = int(input())
-x2 = int(input())
-y2 = int(input())
-if abs(x1 - x2) == abs(y1 - y2) or x1 == x2 or y1 == y2:
-    print('YES')
-else:
-    print('NO')
-
+from test import last_digit
 
 #Площадь треугольника
 a, b = float(input()), float(input())
@@ -235,7 +240,7 @@ else:
 
 #Площадь и длина
 r = float(input())
-from math import pi, trunc
+from math import pi
 
 s = pi * r ** 2
 c = 2 * pi * r
@@ -378,85 +383,80 @@ for i in range(1, 10 + 1):
 a, b = int(input()), int(input())
 triger = 0
 for i in range(a, b + 1):
-    if (i ** 3) % 10 in [4,9]:# Чтобы не писать два условия,
+    if (i ** 3) % 10 == [4,9]:# Чтобы не писать два условия,
         triger += 1           # можно в списки требуемые числа отправить
 print(triger)                 # if i**3 % 10 in [4, 9]:
 
-# Сумма чисел
-# На вход программе подаются натуральное число n, а затем n целых чисел, каждое на отдельной строке.
-# Напишите программу, которая подсчитывает сумму введённых чисел (не включая само число n)
-n = int(input())
-s = 0
-for i in range(n, 0, -1):
-    s += int(input())
-print(s)
+#   Сумма чисел
 
-#   Асимптотическое приближение 📉
-from math import log
+#   Последовательность Фибоначчи 🌶️
 n = int(input())
-summ = 0
+m1, m2 = 0, 1
+m3 = 1
 for i in range(n):
-    summ += 1 / (i + 1)
-summ -= log(n)
-print(summ)
+    print(m3, end = ' ')
+    m3 = m1 + m2
+    m1, m2 = m2, m3
 
-#   Сумма чисел 2
-summ = 0
-n = int(input())
-for i in range(1, n + 1):
-    if (i ** 2) % 10 in [2,5,8]:
-        summ += i
-print(summ)
+#   Цикл While
+#   До КОНЦА 1
+count = 0
+while input() not in ('стоп', 'хватит', 'достаточно'):
+    count += 1
+print(count)
 
-#   Факториал ❗
-fuck = 1
-for i in range(1, int(input()) + 1):
-    fuck *= i
-print(fuck)
-
-#   Без нулей 0️
-umn = 1
-for i in range (10):
+#   Пока делимся
+a = int(input())
+while a % 7 == 0:
+    print(a)
     a = int(input())
-    if a != 0:
-        umn *= a
-print(umn)
 
-#   Сумма делителей
-n = int(input())
+#   Сумма чисел
 summ = 0
-for i in range(1, n + 1):
-    if n % i == 0:
-        summ += i
+step = int(input())
+while step >= 0:
+    summ += step
+    step = int(input())
 print(summ)
 
-#   Знакочередующаяся сумма
-n = int(input())
-summ = 0
-for i in range(1, n + 1):
-    if i % 2 == 0:
-        summ -= i
-    else:
-        summ += i
-print(summ)
+#   Количество пятёрок 5️⃣
+ball = int(input())
+count = 0
+while 0 < ball < 6:
+    if ball == 5:
+        count += 1
+    ball = int(input())
+print(count)
 
-#   Наибольшие числа 🌶️🌶️
-n, mx, mx2 = int(input()), 0, 0
-for i in range(n):
-    count = int(input())
-    if count >= mx:             # Проверяем текущее число с max1
-        mx, mx2 = count, mx     # если число больше текущего max, то делаем его max 2
-    elif count >= mx2:          # Если первое условие не прошло, проверяем это же число с max2
-        mx2 = count             # Если оно больше max2, то меняем местами
-print(mx, mx2, sep='\n')
+#   Ведьмаку заплатите чеканной монетой 💰
+a = int(input())
+count = 0
+while a >= 25:
+    a -= 25
+    count += 1
+while a >= 10:
+    a -= 10
+    count += 1
+while a >= 5:
+    a -= 5
+    count += 1
+while a >= 1:
+    a -= 1
+    count += 1
+print(count)
 
-#   Only even numbers 🌶️
-flag = True
-for _ in range(10):
-    a = int(input())
-    if a % 2 != 0:
-        flag = False
-if flag:
-    print('YES')
-else:
-    print('NO')
+#   Обратный порядок 1
+a = int(input())
+while a != 0:
+    last_digit = a % 10
+    print(last_digit)
+    a = a // 10
+
+#   Обратный порядок 2
+new_digital = ''                        #Создаем пустую строку для обратного числа
+a = int(input())
+while a != 0:
+    last_digit = a % 10
+    new_digital += str(last_digit)      #Добавляем к нашему новому числу через преобразование в строку
+    a = a // 10
+print(new_digital)

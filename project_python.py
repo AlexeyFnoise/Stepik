@@ -235,7 +235,7 @@ else:
 
 #Площадь и длина
 r = float(input())
-from math import pi, trunc
+from math import pi
 
 s = pi * r ** 2
 c = 2 * pi * r
@@ -378,85 +378,65 @@ for i in range(1, 10 + 1):
 a, b = int(input()), int(input())
 triger = 0
 for i in range(a, b + 1):
-    if (i ** 3) % 10 in [4,9]:# Чтобы не писать два условия,
+    if (i ** 3) % 10 == [4,9]:# Чтобы не писать два условия,
         triger += 1           # можно в списки требуемые числа отправить
 print(triger)                 # if i**3 % 10 in [4, 9]:
 
-# Сумма чисел
-# На вход программе подаются натуральное число n, а затем n целых чисел, каждое на отдельной строке.
-# Напишите программу, которая подсчитывает сумму введённых чисел (не включая само число n)
-n = int(input())
-s = 0
-for i in range(n, 0, -1):
-    s += int(input())
-print(s)
+#   Сумма чисел
 
-#   Асимптотическое приближение 📉
-from math import log
+#   Последовательность Фибоначчи 🌶️
 n = int(input())
-summ = 0
+m1, m2 = 0, 1
+m3 = 1
 for i in range(n):
-    summ += 1 / (i + 1)
-summ -= log(n)
-print(summ)
+    print(m3, end = ' ')
+    m3 = m1 + m2
+    m1, m2 = m2, m3
 
-#   Сумма чисел 2
-summ = 0
-n = int(input())
-for i in range(1, n + 1):
-    if (i ** 2) % 10 in [2,5,8]:
-        summ += i
-print(summ)
+#   Цикл While
+#   До КОНЦА 1
+count = 0
+while input() not in ('стоп', 'хватит', 'достаточно'):
+    count += 1
+print(count)
 
-#   Факториал ❗
-fuck = 1
-for i in range(1, int(input()) + 1):
-    fuck *= i
-print(fuck)
-
-#   Без нулей 0️
-umn = 1
-for i in range (10):
+#   Пока делимся
+a = int(input())
+while a % 7 == 0:
+    print(a)
     a = int(input())
-    if a != 0:
-        umn *= a
-print(umn)
 
-#   Сумма делителей
-n = int(input())
+#   Сумма чисел
 summ = 0
-for i in range(1, n + 1):
-    if n % i == 0:
-        summ += i
+step = int(input())
+while step >= 0:
+    summ += step
+    step = int(input())
 print(summ)
 
-#   Знакочередующаяся сумма
-n = int(input())
-summ = 0
-for i in range(1, n + 1):
-    if i % 2 == 0:
-        summ -= i
-    else:
-        summ += i
-print(summ)
+#   Количество пятёрок 5️⃣
+ball = int(input())
+count = 0
+while 0 < ball < 6:
+    if ball == 5:
+        count += 1
+    ball = int(input())
+print(count)
 
-#   Наибольшие числа 🌶️🌶️
-n, mx, mx2 = int(input()), 0, 0
-for i in range(n):
-    count = int(input())
-    if count >= mx:             # Проверяем текущее число с max1
-        mx, mx2 = count, mx     # если число больше текущего max, то делаем его max 2
-    elif count >= mx2:          # Если первое условие не прошло, проверяем это же число с max2
-        mx2 = count             # Если оно больше max2, то меняем местами
-print(mx, mx2, sep='\n')
+#   Ведьмаку заплатите чеканной монетой 💰
+a = int(input())
+count = 0
+while a >= 25:
+    a -= 25
+    count += 1
+while a >= 10:
+    a -= 10
+    count += 1
+while a >= 5:
+    a -= 5
+    count += 1
+while a >= 1:
+    a -= 1
+    count += 1
+print(count)
 
-#   Only even numbers 🌶️
-flag = True
-for _ in range(10):
-    a = int(input())
-    if a % 2 != 0:
-        flag = False
-if flag:
-    print('YES')
-else:
-    print('NO')

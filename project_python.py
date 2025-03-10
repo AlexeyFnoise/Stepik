@@ -373,3 +373,14 @@ for i in range(m, n + 1):
 n = int(input())
 for i in range(1, 10 + 1):
     print(n, 'x', i, '=', n * i)
+
+#   Количество чисел
+a, b = int(input()), int(input())
+triger = 0
+for i in range(a, b + 1):
+    if (i ** 3) % 10 == [4,9]:# Чтобы не писать два условия,
+        triger += 1           # можно в списки требуемые числа отправить
+print(triger)                 # if i**3 % 10 in [4, 9]:
+
+#   Сумма чисел
+

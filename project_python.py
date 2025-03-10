@@ -337,4 +337,39 @@ for i in range(n):
     print(i + 1, m)
     m = m + (m * (p / 100))
 
+#   Последовательность чисел 1
+m, n = int(input()), int(input())
+for i in range(m, n + 1):
+    print(i)
 
+#   Последовательность чисел 2 🌶️
+m, n = int(input()), int(input())
+if m < n:
+    for i in range(m, n + 1):
+        print(i)
+elif n < m:
+    for i in range(m, n - 1, -1):
+        print(i)
+else:
+    print(n)
+
+# Последовательность чисел 3 🌶️
+m, n = int(input()), int(input())
+for i in range(m, n - 1, -1):
+    if i % 2 != 0:
+        print(i)
+
+#   Последовательность чисел 4
+m, n = int(input()), int(input())
+for i in range(m, n + 1):
+    if i % 17 == 0:
+        print(i)
+    elif i % 10 == 9:
+        print(i)
+    elif i % 3 == 0 and i % 5 == 0:
+        print(i)
+
+#   Таблица умножения
+n = int(input())
+for i in range(1, 10 + 1):
+    print(n, 'x', i, '=', n * i)

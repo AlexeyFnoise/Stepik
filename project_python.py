@@ -1,4 +1,6 @@
 ##Проверка рулетки
+from sys import flags
+
 a = int(input())
 if a < 0 or a > 36:
     print('ошибка ввода')
@@ -503,6 +505,18 @@ count = 'YES'
 temp = n % 10
 while n:
     if temp != n % 10:
+        count = 'NO'
+    n //= 10
+print(count)
+
+#   Упорядоченные цифры 🌶️
+n = int(input())
+temp = 0
+count = 'YES'
+while n:
+    if n % 10 >= temp:
+        temp = n % 10
+    else:
         count = 'NO'
     n //= 10
 print(count)

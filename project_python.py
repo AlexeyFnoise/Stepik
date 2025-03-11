@@ -520,3 +520,6 @@ while n:
         count = 'NO'
     n //= 10
 print(count)
+
+# новая функция
+a = int(input())

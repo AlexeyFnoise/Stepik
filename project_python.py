@@ -236,7 +236,7 @@ else:
 
 #Площадь и длина
 r = float(input())
-from math import pi
+from math import pi, trunc
 
 s = pi * r ** 2
 c = 2 * pi * r
@@ -456,3 +456,53 @@ while a != 0:
     new_digital += str(last_digit)      #Добавляем к нашему новому числу через преобразование в строку
     a = a // 10
 print(new_digital)
+
+#   max и min
+new_digital = int(input())
+mx = 0                                         #Задаем максимальное значение 0
+mn = 9                                         #Задаем минимальное значение 9, так как сравнивать с 0 не вариант
+while new_digital != 0:
+    last_digit = new_digital % 10
+    if last_digit >= mx:                        #Сравниваем последнюю цифру с ранее MAX значением
+        mx = last_digit
+    if last_digit < mn:                         #Сравниваем последнюю цифру с ранее MIN значанием
+            mn = last_digit
+    new_digital //= 10
+print('Максимальная цифра равна', mx)
+print('Минимальная цифра равна', mn)
+
+#   Все вместе
+a = int(input())
+summ = 0
+umnoz = 1
+count = 0
+temp = 0
+first_digital = 0
+last_digit = a % 10
+while a != 0:
+    temp = a % 10
+    summ += temp
+    umnoz *= temp
+    count += 1
+    a, first_digital = a // 10, a
+srednee = summ / count
+print(summ, count, umnoz, srednee, first_digital, first_digital + last_digit, sep='\n')
+
+#   Вторая цифра
+n = int(input())
+two_digital = 0
+while n:
+    if len(str(n)) == 2:                #Пока длина строки не равна 2 символам, удаляем последнюю цифру
+        two_digital = n % 10            #Длина строки стала 2, берем вторую цифру и записываем в переменную
+    n //= 10
+print(two_digital)
+
+#   Одинаковые цифры
+n = int(input())
+count = 'YES'
+temp = n % 10
+while n:
+    if temp != n % 10:
+        count = 'NO'
+    n //= 10
+print(count)

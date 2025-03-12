@@ -225,7 +225,7 @@ else:
 
 #Площадь и длина
 r = float(input())
-from math import pi, trunc
+from math import pi
 s = pi * r ** 2
 c = 2 * pi * r
 print(s, c, sep='\n')
@@ -498,3 +498,53 @@ while n:
         count = 'NO'
     n //= 10
 print(count)
+
+#   7.6 break, continue и else
+
+#   Наименьший делитель
+n = int(input())
+temp = 2
+while n:
+    if n % temp == 0:
+        break
+    else:
+        temp += 1
+print(temp)
+
+# Следуй правилам 📋
+n = int(input())
+for i in range(1, n + 1):
+    if 5 <= i <= 9:
+        continue
+    elif 17 <= i <= 37:
+        continue
+    else:
+        if 78 <= i <= 87:
+            continue
+    print(i)
+
+count = 0
+p = 0
+for i in range(1, 11):
+    x = int(input())
+    if x >= 0:
+        p *= x
+        count += 1
+if count > 0:
+    print(count, p, sep='\n')
+else:
+    print('NO')
+
+mx = -10**6 # неверно задана переменная (сравнивать будет с минимальным)
+s = 0
+for _ in range(10):  # неверно задан диапазон (было 11), замена "i" на "_"
+    x = int(input())
+    if x < 0:
+        s += x  # неверно задана формула (было равенство "=")
+        if x > mx:  # смещен блок кода, чтобы условие работало только для x < 0
+            mx = x
+if s == 0:  # не был задано условие для вывода при отсутствии отрицательных чисел
+    print('NO')
+else:
+    print(s)
+    print(mx)

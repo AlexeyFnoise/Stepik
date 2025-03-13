@@ -500,7 +500,6 @@ while n:
 print(count)
 
 #   7.6 break, continue и else
-
 #   Наименьший делитель
 n = int(input())
 temp = 2
@@ -548,3 +547,20 @@ if s == 0:  # не был задано условие для вывода при
 else:
     print(s)
     print(mx)
+
+#   7.8 Вложенные циклы. Часть 1
+#   Таблица-2
+n = int(input())
+for i in range (n):
+    for j in range(5):
+        print(i, end=' ')
+    print()
+
+#   Таблица-3
+n = int(input())
+for i in range(1, n + 1):
+    for j in range(1, 10):
+        print(i, '+', j, '=', i + j)
+    print()
+
+# Звёздный треугольник 🌟🌶️🌶️

@@ -499,6 +499,20 @@ while n:
     n //= 10
 print(count)
 
+n = int(input())
+max_digit = - 1   # 3 ошибка
+while n != 0:   # 2 ошибка
+    digit = n % 10
+    if digit % 3 == 0:
+        if digit > max_digit: # 4 ошибка
+            max_digit = digit # 5 ошибка
+    n = n // 10   # 1 ошибка
+if max_digit == - 1:
+    print('NO')
+else:
+    print(max_digit)
+
+
 #   7.6 break, continue и else
 #   Наименьший делитель
 n = int(input())
@@ -564,3 +578,35 @@ for i in range(1, n + 1):
     print()
 
 # Звёздный треугольник 🌟🌶️🌶️
+n = int(input())
+for i in range(1, n // 2 + 2, 1):
+    print('*' * i)
+for i in range(n // 2 , 0, -1):
+    print('*' * i)
+
+#   Численный треугольник 1
+n = int(input())
+for i in range(n):
+    for j in range(i + 1):
+        print(i + 1, end='')
+    print()
+
+# 12 месяцев
+for n in range(1, 20):
+    for k in range(1, 20):
+        for m in range(1, 20):
+            if 28 * n + 30 * k + 31 * m == 365:
+                print(n, k, m)
+                break
+# Ответ
+#   1 4 7
+#   2 1 9
+
+#   Старинная задача 🐮🌶️
+for n in range(100):
+    for k in range(100):
+        for m in range(100):
+            if 10 * n + 5 * k + 0.5 * m == 100 and n + k + m == 100:
+                print(n, k, m)
+
+#   Гипотеза Эйлера о сумме степеней 🌶️🌶️

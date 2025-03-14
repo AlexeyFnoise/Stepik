@@ -618,3 +618,14 @@ for a in range(1, 151):
                 if e ** 5 == int((a ** 5) + (b ** 5) + (c ** 5) + (d ** 5)):
                     print(a + b + c + d + e)
                     print('a =', a, 'b =', b, 'c =', c, 'd =', d, 'e =', e)
+
+#   Численный треугольник 2
+n = int(input())
+count = 1
+for i in range(1, n + 1):
+    for k in range(i):
+        print(count, end=' ')
+        count += 1
+    print()
+
+#   Численный треугольник 3 🌶️

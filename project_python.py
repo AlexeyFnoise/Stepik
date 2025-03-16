@@ -619,7 +619,7 @@ for a in range(1, 151):
                     print(a + b + c + d + e)
                     print('a =', a, 'b =', b, 'c =', c, 'd =', d, 'e =', e)
 
-#   Численный треугольник 2
+    #   Численный треугольник 2
 n = int(input())
 count = 1
 for i in range(1, n + 1):
@@ -629,3 +629,67 @@ for i in range(1, n + 1):
     print()
 
 #   Численный треугольник 3 🌶️
+n = int(input())
+count = 1
+
+# Первый цикл перебирает строки
+for i in range(1, n + 1):
+    # Второй вложенный цикл начинает писать от 1 до N
+    for _ in range(i):
+        print(count, end='')
+        if count != i:
+            count += 1
+    # После завершения следует третий вложенный цикл, который пишет в обратном порядке
+    else:
+        for _ in range(i - 1):
+            count -= 1
+            print(count, end='')
+    # В конце строки переход на новую строку и обнуление счетчика
+    print()
+    count = 1
+
+#   Делители-1 🌶️
+a, b = int(input()), int(input())
+sum = 0
+rezultat = 0
+
+for i in range(a, b + 1):
+    for k in range(1, i + 1):
+        if i % k == 0:
+            sum += k
+    if sum >= rezultat:
+        rezultat = sum
+        number = i
+    sum = 0
+print(number, rezultat)
+
+#   Делители-2
+n = int(input())
+
+for i in range(1, n + 1):
+    print(i, end='')
+    for k in range(1, i + 1):
+        if i % k == 0:
+            print('+', end='')
+    print()
+
+#   Цифровой корень 🌶️
+n = int(input())
+
+while n > 9:
+    summ = 0
+    while n != 0:
+        summ += (n % 10)
+        n //= 10
+    n = summ
+print(n)
+
+#   Сумма факториалов ❗
+n = int(input())
+
+facktorial = 1
+summ_fuck = 0
+for i in range(1, n + 1):
+    facktorial *= i
+    summ_fuck += facktorial
+print(summ_fuck)

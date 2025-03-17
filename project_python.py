@@ -708,3 +708,22 @@ for i in range(a, b + 1):
             break
     else:
         print(i)
+
+#   9.1 Индексация
+#   В столбик 1
+s = str(input())
+
+for i in range(0, len(s), 2):
+    print(s[i])
+
+#   В столбик 2
+s = str(input())
+for i in range(-1, -(len(s)) - 1, -1):
+    print(s[i])
+
+#   Цифра 1
+s = str(input())
+sum_numbers = 0
+for i in range(len(s)):
+    sum_numbers += int(s[i])
+print(sum_numbers)

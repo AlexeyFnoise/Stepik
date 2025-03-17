@@ -787,3 +787,4 @@ while n > 0:
 for i in range(-1, -(len(s)) - 1, -1):
     s2 += s[i]
 print(s2)
+

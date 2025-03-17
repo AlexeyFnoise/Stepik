@@ -652,6 +652,7 @@ for i in range(1, n + 1):
 a, b = int(input()), int(input())
 sum = 0
 rezultat = 0
+number = 0
 
 for i in range(a, b + 1):
     for k in range(1, i + 1):
@@ -727,3 +728,26 @@ sum_numbers = 0
 for i in range(len(s)):
     sum_numbers += int(s[i])
 print(sum_numbers)
+
+#   Цифра 2
+s = str(input())
+digital = '0123456789'
+
+for i in range(len(s)):
+    if s[i] in digital:
+        print('Цифра')
+        break
+else:
+    print('Цифр нет')
+
+#   Сколько раз?
+s = str(input())
+n, m = 0, 0
+
+for i in s:
+    if i == '+':
+        n += 1
+    if i == '*':
+        m += 1
+print('Символ + встречается', n, 'раз')
+print('Символ * встречается', m, 'раз')

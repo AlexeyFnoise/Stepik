@@ -652,6 +652,7 @@ for i in range(1, n + 1):
 a, b = int(input()), int(input())
 sum = 0
 rezultat = 0
+number = 0
 
 for i in range(a, b + 1):
     for k in range(1, i + 1):

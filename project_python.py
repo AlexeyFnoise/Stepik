@@ -837,3 +837,17 @@ else:
     print('NO')
 
 #   sWAP cASE 🔃
+s = input()
+# Метод str.swapcase() меняет у всех символов регистр на противоположный
+print(s.swapcase())
+
+#   Нижний регистр 🔽
+s = input()
+s1 = s.lower()
+count = 0
+
+for i in range(len(s)):
+    if s[i] == s1[i] and s[i] not in '1234567890':
+        count += 1
+else:
+    print(count)

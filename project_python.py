@@ -851,3 +851,14 @@ for i in range(len(s)):
         count += 1
 else:
     print(count)
+
+#   9.4 Методы строк. Часть 2
+#   Минутка генетики 🧬
+s = input().lower()
+s1 = 'агцт'
+adenin = 'Аденин: ' + str(s.count(s1[0]))
+guanin = 'Гуанин: ' + str(s.count(s1[1]))
+citozin = 'Цитозин: ' + str(s.count(s1[2]))
+Timin = 'Тимин: ' + str(s.count(s1[3]))
+
+print(adenin, guanin, citozin, Timin, sep='\n')

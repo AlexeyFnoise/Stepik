@@ -822,3 +822,6 @@ if len(s) % 2 == 0:
     print(s[long:] + s[:long])
 else:
     print(s[long + 1:] + s[:long + 1])
+
+
+#   3 Методы строк. Часть 1

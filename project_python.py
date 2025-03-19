@@ -851,3 +851,56 @@ for i in range(len(s)):
         count += 1
 else:
     print(count)
+
+#   9.4 Методы строк. Часть 2
+#   Минутка генетики 🧬
+s = input().lower()
+s1 = 'агцт'
+adenin = 'Аденин: ' + str(s.count(s1[0]))
+guanin = 'Гуанин: ' + str(s.count(s1[1]))
+citozin = 'Цитозин: ' + str(s.count(s1[2]))
+Timin = 'Тимин: ' + str(s.count(s1[3]))
+
+print(adenin, guanin, citozin, Timin, sep='\n')
+
+#   Очень странные дела 📻
+n = int(input())
+count = 0
+
+for _ in range(n):
+    s = input()
+    if s.count('11') >= 3:
+        count += 1
+else:
+    print(count)
+
+#   Количество цифр
+s = input()
+cnt = 0
+
+# перебираем все элементы строки S
+for i in s:
+    # сравниваем элемент с цифрами от 0 до 9
+    if i in '0123456789':
+        cnt += 1
+print(cnt)
+
+#   .com or .ru 🌐
+s = input()
+# Проверка окончания строки через метод str.endswith()
+if s.endswith('.ru') or s.endswith('.com'):
+    print('YES')
+else:
+    print('NO')
+
+#   Самый частотный символ
+s = input()
+mx = 0
+s1 = ''
+for i in s:
+    if s.count(i) >= mx:
+        mx = s.count(i)
+        s1 = i
+print(s1)
+
+#   Первое и последнее вхождение

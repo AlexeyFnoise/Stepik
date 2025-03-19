@@ -904,3 +904,14 @@ for i in s:
 print(s1)
 
 #   Первое и последнее вхождение
+s = input()
+const = 'f'
+
+#   Собраем количество вхождений символа 'F'
+if s.count(const) == 1:
+    print(s.find(const))
+elif s.count(const) > 1:
+    # через str.find(), str.rfind() выводим первый и последние индексы вхождения
+    print(s.find(const), s.rfind(const))
+else:
+    print('NO')

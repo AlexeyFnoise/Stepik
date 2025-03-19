@@ -915,3 +915,8 @@ elif s.count(const) > 1:
     print(s.find(const), s.rfind(const))
 else:
     print('NO')
+
+#   Удаление фрагмента
+s, const = input(), 'h'
+stemp = s[s.find(const):s.rfind(const) + 1]
+print(s.replace(stemp,''))

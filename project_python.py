@@ -920,3 +920,43 @@ else:
 s, const = input(), 'h'
 stemp = s[s.find(const):s.rfind(const) + 1]
 print(s.replace(stemp,''))
+
+#   9.5 Методы строк. Часть 3
+#   Плохие комментарии 😈
+#   Ваша задача – написать программу, которая поможет Сэму проверять комментарии
+s = ''
+for i in range(1, int(input())+1):
+    s = input()
+    if s.isspace() or s == '':
+        print(i, ': COMMENT SHOULD BE DELETED', sep='')
+    else:
+        print(i, ': ', s, sep='')
+
+#   Автомобильный номер 🚘🌶️
+s = input()
+Flag = True
+cnst = 'АВЕКМНОРСТУХ'
+
+for i in range(len(s)):
+    if i == 0 or 4 <= i <= 5:
+        if s[i] in cnst:
+            continue
+        else:
+            Flag = False
+            break
+    if 1 <= i <= 3 or 7 <= i <= 9:
+        if s[i].isdigit():
+            continue
+        else:
+            Flag = False
+            break
+    if i == 6:
+        if s[i] == '_':
+            continue
+        else:
+            Flag = False
+            break
+if Flag and 11 > len(s) > 8:
+    print('YES')
+else:
+    print('NO')

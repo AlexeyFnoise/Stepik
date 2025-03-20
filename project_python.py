@@ -960,3 +960,37 @@ if Flag and 11 > len(s) > 8:
     print('YES')
 else:
     print('NO')
+
+#   Проверь никнейм 👩🌶️
+s = input()
+#print(s.startswith('@'), len(s), s.islower(), s[1:].isalnum())
+if s.startswith('@') and 5 <= len(s) <= 15 and s[1:].isalnum():
+    if s[1:].isdigit() or s.islower():
+        print('Correct')
+    else:
+        print('Incorrect')
+else:
+    print('Incorrect')
+
+#   9.6 Форматирование строк
+year = 2010
+place = '10k'
+valuta = 'Bitcoin'
+s = 'In {0}, someone paid {1} {2} for two pizzas.'.format(year, place, valuta)
+print(s)
+
+#   Курсы валют 💹
+date = input()
+euro = input()
+uan = input()
+print(f'На {date}: 1€ = {euro}₽, 1¥ = {uan}₽')
+
+#   Сумма кубов 🆚 Куб суммы
+a, b = int(input()), int(input())
+kub = (a + b) ** 3
+summ_kub = a **3 + b ** 3
+print(f'Для чисел {a} и {b}:')
+print(f'  Сумма кубов: {a}**3 + {b}**3 = {summ_kub}')
+print(f'  Куб суммы: ({a} + {b})**3 = {kub}')
+
+#   (Не) Активное похудение 🏃🌶️

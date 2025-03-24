@@ -1089,3 +1089,16 @@ for _ in range(n-1):
         break
 else:
     print('YES')
+
+
+#   Второе вхождение 2️⃣
+# s = input()
+#
+# if s.count("f") == 0:
+#     print(-2)
+# elif s.count("f") == 1:
+#     print(-1)
+# else:
+#     Использование двух методов к 1 строке!
+#     res = s.replace("f", ".", 1).find("f")
+#     print(res)

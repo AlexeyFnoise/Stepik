@@ -1102,3 +1102,22 @@ else:
 #     Использование двух методов к 1 строке!
 #     res = s.replace("f", ".", 1).find("f")
 #     print(res)
+
+#   11.1 Введение в списки
+#   Список букв
+n = int(input())
+s = ['a', 'b', 'c', 'd', 'e', 'f', 'g',
+     'h', 'i', 'j', 'k', 'l', 'm', 'n',
+     'o', 'p', 'q', 'r', 's', 't', 'u',
+     'v', 'w', 'x', 'y', 'z']
+print(s[1:n + 1])
+
+# или решение от степика
+n = int(input())
+
+s = ""
+for i in range(n):
+    s += chr(ord("a") + i)
+
+print(list(s))
+

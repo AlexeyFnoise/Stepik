@@ -1149,3 +1149,60 @@ else:
 #     Использование двух методов к 1 строке!
 #     res = s.replace("f", ".", 1).find("f")
 #     print(res)
+
+#   11.3 Методы списков. Часть 1
+#   Все сразу 1 🌶️
+numbers = [2, 6, 3, 14, 10, 4, 11, 16, 12, 5, 4, 16, 1, 0, 8, 16, 10, 10, 8, 5, 1, 11, 10, 10, 12, 0, 0, 6, 14, 8, 2, 12, 14, 5, 6, 12, 1, 2, 10, 14, 9, 1, 15, 1, 2, 14, 16, 6, 7, 5]
+print(len(numbers), numbers[-1], numbers[::-1], sep='\n')
+if (5 and 17) in numbers:
+    print('YES')
+else:
+    print('NO')
+print(numbers[1:-1])
+
+#   Список строк
+n = int(input())
+#Создаем пусто список
+spisok = []
+for i in range(n):
+    # Через метод .append добавляем по очереди строки
+    spisok.append(input())
+print(spisok)
+
+#   Алфавит
+spisok = []
+for i in range(26):
+    spisok.append(chr(ord('a') + i) * (i + 1))
+print(spisok)
+
+#   Список кубов
+n = int(input())
+ls = []
+for i in range(1, n + 1):
+    ls.append(int(input()) ** 3)
+print(ls)
+
+#   Список делителей
+n = int(input())
+ls = []
+for i in range(1, n + 1):
+    if n % i == 0:
+        ls.append(i)
+print(ls)
+
+#   Суммы двух
+n = int(input())
+ls = []
+ls2 = []
+for i in range(n):
+    ls.append(int(input()))
+for i in range(len(ls) - 1):
+    ls2.append(ls[i] + ls[i + 1])
+print(ls2)
+
+#   Удалите нечётные индексы
+n, ls = int(input()), []
+for i in range(n):
+    ls.append(int(input()))
+del ls[1::2]
+print(ls)

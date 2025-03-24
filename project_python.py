@@ -1035,6 +1035,53 @@ for _ in range(4):
         max_summ_unicode = summ_unicode
 print(max_word)
 
+#   Стоимость ответа 💬
+s = input()
+oplata = 0
+for i in s:
+    oplata += (ord(i) * 3)
+print(f"Текст сообщения: '{s}'")
+print(f'Стоимость сообщения: {oplata}🐝')
+
+#   Накручиваем стоимость ответа ⬆️🌶️
+s = str(input())
+symbol_en, symbol_rus = 'eyopaxcETOPAHXCBM', 'еуорахсЕТОРАНХСВМ'
+oplata_old, oplata_new = 0, 0
+for i in s:
+    oplata_old += (ord(i) * 3)
+for i in range(len(s)):
+    for j in range(len(symbol_en)):
+        if s[i] == symbol_en[j]:
+            s = s.replace(symbol_en[j],symbol_rus[j])
+for i in s:
+    oplata_new += (ord(i) * 3)
+print(f'Старая стоимость: {oplata_old}🐝', f'Новая стоимость: {oplata_new}🐝', sep='\n')
+
+#   Шифр Цезаря 🌶️
+step = int(input())
+s = input().lower()
+s1 = ''
+for i in range(len(s)):
+    if ord(s[i]) - step < ord('a') or ord(s[i]) > ord('z'):
+        s1 += chr(ord(s[i]) - step + 26)
+    else:
+        s1 += chr(ord(s[i]) - step)
+print(s1)
+# Решение от курса +
+# n = int(input())
+# s = input()
+# alphabet = 'abcdefghijklmnopqrstuvwxyz'
+#
+# for c in s:
+#     # ищем индекс текущей буквы в строке алфавита
+#     ind = alphabet.index(c)
+#     # находим новую букву
+#     new_c = alphabet[ind - n]
+#
+#     print(new_c, end='')
+
+#   Сбой в системе ⚠️🌶️🌶️
+
 #   Строковые минимум и максимум
 i = input()
 min_s, max_s = i, i
@@ -1121,3 +1168,112 @@ for i in range(n):
 
 print(list(s))
 
+
+
+#   11.3 Методы списков. Часть 1
+#   Все сразу 1 🌶️
+numbers = [2, 6, 3, 14, 10, 4, 11, 16, 12, 5, 4, 16, 1, 0, 8, 16, 10, 10, 8, 5, 1, 11, 10, 10, 12, 0, 0, 6, 14, 8, 2, 12, 14, 5, 6, 12, 1, 2, 10, 14, 9, 1, 15, 1, 2, 14, 16, 6, 7, 5]
+print(len(numbers), numbers[-1], numbers[::-1], sep='\n')
+if (5 and 17) in numbers:
+    print('YES')
+else:
+    print('NO')
+print(numbers[1:-1])
+
+#   Список строк
+n = int(input())
+#Создаем пусто список
+spisok = []
+for i in range(n):
+    # Через метод .append добавляем по очереди строки
+    spisok.append(input())
+print(spisok)
+
+#   Алфавит
+spisok = []
+for i in range(26):
+    spisok.append(chr(ord('a') + i) * (i + 1))
+print(spisok)
+
+#   Список кубов
+n = int(input())
+ls = []
+for i in range(1, n + 1):
+    ls.append(int(input()) ** 3)
+print(ls)
+
+#   Список делителей
+n = int(input())
+ls = []
+for i in range(1, n + 1):
+    if n % i == 0:
+        ls.append(i)
+print(ls)
+
+#   Суммы двух
+n = int(input())
+ls = []
+ls2 = []
+for i in range(n):
+    ls.append(int(input()))
+for i in range(len(ls) - 1):
+    ls2.append(ls[i] + ls[i + 1])
+print(ls2)
+
+#   Удалите нечётные индексы
+n, ls = int(input()), []
+for i in range(n):
+    ls.append(int(input()))
+del ls[1::2]
+print(ls)
+
+#   k-ая буква слова 🌶️
+n = int(input())
+ls = []
+s = ''
+
+for i in range(n):
+    ls.append(str(input()))
+
+k = int(input())
+
+for i in range(len(ls)):
+    s = ls[i]
+    if len(s) < k:
+        continue
+    else:
+        print(s[k - 1], end='')
+
+#   Символы всех строк
+n = int(input())
+ls = []
+for i in range(n):
+    ls.extend(input())
+print(ls)
+
+#   Значение функции
+n = int(input())
+ls = []
+for i in range(n):
+    ls.append(int(input()))
+print(*ls, sep='\n')
+print()
+for s in ls:
+    print(s ** 2 + 2 * s + 1)
+
+#   Remove outliers
+n = int(input())
+ls = []
+for _ in range(n):
+    ls.append(int(input()))
+mx_ls = max(ls)
+mn_ls = min(ls)
+for i in range(len(ls)):
+    if ls[i] == mx_ls:
+        del ls[i]
+        break
+for i in range(len(ls)):
+    if ls[i] == mn_ls:
+        del ls[i]
+        break
+print(*ls, sep='\n')

@@ -1230,3 +1230,30 @@ ls = []
 for i in range(n):
     ls.extend(input())
 print(ls)
+
+#   Значение функции
+n = int(input())
+ls = []
+for i in range(n):
+    ls.append(int(input()))
+print(*ls, sep='\n')
+print()
+for s in ls:
+    print(s ** 2 + 2 * s + 1)
+
+#   Remove outliers
+n = int(input())
+ls = []
+for _ in range(n):
+    ls.append(int(input()))
+mx_ls = max(ls)
+mn_ls = min(ls)
+for i in range(len(ls)):
+    if ls[i] == mx_ls:
+        del ls[i]
+        break
+for i in range(len(ls)):
+    if ls[i] == mn_ls:
+        del ls[i]
+        break
+print(*ls, sep='\n')

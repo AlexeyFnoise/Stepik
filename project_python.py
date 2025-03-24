@@ -1081,3 +1081,71 @@ print(s1)
 #     print(new_c, end='')
 
 #   Сбой в системе ⚠️🌶️🌶️
+
+#   Строковые минимум и максимум
+i = input()
+min_s, max_s = i, i
+while i != 'КОНЕЦ':
+    min_s = min(min_s, i)
+    max_s = max(max_s, i)
+    i = input()
+
+print(f'Минимальная строка ⬇️: {min_s}', f'Максимальная строка ⬆️: {max_s}', sep='\n')
+
+#   Необычное сравнение 📊
+s1, s2 = input().lower(), input().lower()
+s1_new, s2_new = '', ''
+for i in range(len(s1)):
+    if s1[i].isalpha():
+        s1_new += s1[i]
+for i in range(len(s2)):
+    if s2[i].isalpha():
+        s2_new += s2[i]
+print(s1_new, s2_new)
+if s1_new == s2_new:
+    print('YES')
+else:
+    print('NO')
+
+#   Сортируем слова 📶
+s1, s2, s3 = input(), input(), input()
+temp = s1 + s2 + s3
+s_max = max(s1,s2,s3)
+s_min = min(s1,s2,s3)
+temp = temp.replace(s_max, '')
+temp = temp.replace(s_min, '')
+print(s_min, temp, s_max )
+
+#   Порядок книг 📚🌶️
+n = int(input())
+temp = input()
+for _ in range(n-1):
+    s = input()
+    if temp[0:temp.find(' ')] < s[0:s.find(' ')]:
+        temp = s
+        continue
+    elif temp[0:temp.find(' ')] == s[0:s.find(' ')]:
+        if temp[temp.find('«'):] < s[s.find('«'):]:
+            temp = s
+            continue
+        else:
+            print('NO')
+            break
+    else:
+        print('NO')
+        break
+else:
+    print('YES')
+
+
+#   Второе вхождение 2️⃣
+# s = input()
+#
+# if s.count("f") == 0:
+#     print(-2)
+# elif s.count("f") == 1:
+#     print(-1)
+# else:
+#     Использование двух методов к 1 строке!
+#     res = s.replace("f", ".", 1).find("f")
+#     print(res)

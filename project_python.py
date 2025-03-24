@@ -1206,3 +1206,27 @@ for i in range(n):
     ls.append(int(input()))
 del ls[1::2]
 print(ls)
+
+#   k-ая буква слова 🌶️
+n = int(input())
+ls = []
+s = ''
+
+for i in range(n):
+    ls.append(str(input()))
+
+k = int(input())
+
+for i in range(len(ls)):
+    s = ls[i]
+    if len(s) < k:
+        continue
+    else:
+        print(s[k - 1], end='')
+
+#   Символы всех строк
+n = int(input())
+ls = []
+for i in range(n):
+    ls.extend(input())
+print(ls)

@@ -1,4 +1,4 @@
-##Проверка рулетки
+#Проверка рулетки
 a = int(input())
 if a < 0 or a > 36:
     print('ошибка ввода')
@@ -15,7 +15,7 @@ else:
         elif (a % 2 != 0) and (1 <= a <= 10 or 19 <= a <= 28):
             print('красный')
 
-## Проверка отрезков
+# Проверка отрезков
 a1 = int(input())
 b1 = int(input())
 a2 = int(input())
@@ -1277,3 +1277,63 @@ for i in range(len(ls)):
         del ls[i]
         break
 print(*ls, sep='\n')
+
+#   Без дубликатов
+n = int(input())
+ls = []
+ls_unic = []
+
+# Запрашиваем список данных
+for _ in range(n):
+    ls.append(input())
+# Цикл по списку
+for i in range(len(ls)):
+    # Проверяем, состоит ли текущий элемент в новом списке.
+    # Если нет, то добавляем. Так до конца текущего списка.
+    if ls[i] not in ls_unic:
+        ls_unic.append(ls[i])
+print(*ls_unic, sep='\n')
+
+#   Google search - 1
+n = int(input())
+ls = []
+for _ in range(n):
+    ls.append(input())
+#   Считываем контрольную строку(слово), переводим в нижни регистр
+s = input().lower()
+for i in range(len(ls)):
+    #   Проверяем, состоит ли наша строка S в элементе списка, который тоже переведен в нижний регистр
+    if s in ls[i].lower():
+        print(ls[i])
+#
+# #   Google search - 2 🌶️🌶️
+# n = int(input())
+# ls = []
+# ls_input = []
+# for _ in range(n):
+#     ls.append(input())
+# n_search = int(input())
+# for _ in range(n_search):
+#     ls_input.append(input().lower())
+# for i in range(len(ls)):
+#     for j in range(len(ls_input)):
+#         if ls_input[j].lower() in ls[i].lower():
+#             continue
+#         else:
+#             break
+#     else:
+#         print(ls[i])
+#
+# #   Negatives, Zeros and Positives
+# n, tmp = int(input()), 0
+# ls_zero, ls_minus, ls_plus = [], [], []
+# for _ in range(n):
+#     tmp = int(input())
+#     if tmp == 0:
+#         ls_zero.append(tmp)
+#     elif tmp < 0:
+#         ls_minus.append(tmp)
+#     elif tmp > 0:
+#         ls_plus.append(tmp)
+# print(*ls_minus,*ls_zero,*ls_plus, sep='\n')
+

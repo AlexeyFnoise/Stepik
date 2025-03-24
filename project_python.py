@@ -1034,3 +1034,50 @@ for _ in range(4):
         max_word = s
         max_summ_unicode = summ_unicode
 print(max_word)
+
+#   Стоимость ответа 💬
+s = input()
+oplata = 0
+for i in s:
+    oplata += (ord(i) * 3)
+print(f"Текст сообщения: '{s}'")
+print(f'Стоимость сообщения: {oplata}🐝')
+
+#   Накручиваем стоимость ответа ⬆️🌶️
+s = str(input())
+symbol_en, symbol_rus = 'eyopaxcETOPAHXCBM', 'еуорахсЕТОРАНХСВМ'
+oplata_old, oplata_new = 0, 0
+for i in s:
+    oplata_old += (ord(i) * 3)
+for i in range(len(s)):
+    for j in range(len(symbol_en)):
+        if s[i] == symbol_en[j]:
+            s = s.replace(symbol_en[j],symbol_rus[j])
+for i in s:
+    oplata_new += (ord(i) * 3)
+print(f'Старая стоимость: {oplata_old}🐝', f'Новая стоимость: {oplata_new}🐝', sep='\n')
+
+#   Шифр Цезаря 🌶️
+step = int(input())
+s = input().lower()
+s1 = ''
+for i in range(len(s)):
+    if ord(s[i]) - step < ord('a') or ord(s[i]) > ord('z'):
+        s1 += chr(ord(s[i]) - step + 26)
+    else:
+        s1 += chr(ord(s[i]) - step)
+print(s1)
+# Решение от курса +
+# n = int(input())
+# s = input()
+# alphabet = 'abcdefghijklmnopqrstuvwxyz'
+#
+# for c in s:
+#     # ищем индекс текущей буквы в строке алфавита
+#     ind = alphabet.index(c)
+#     # находим новую букву
+#     new_c = alphabet[ind - n]
+#
+#     print(new_c, end='')
+
+#   Сбой в системе ⚠️🌶️🌶️

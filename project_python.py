@@ -1305,35 +1305,44 @@ for i in range(len(ls)):
     #   Проверяем, состоит ли наша строка S в элементе списка, который тоже переведен в нижний регистр
     if s in ls[i].lower():
         print(ls[i])
-#
-# #   Google search - 2 🌶️🌶️
-# n = int(input())
-# ls = []
-# ls_input = []
-# for _ in range(n):
-#     ls.append(input())
-# n_search = int(input())
-# for _ in range(n_search):
-#     ls_input.append(input().lower())
-# for i in range(len(ls)):
-#     for j in range(len(ls_input)):
-#         if ls_input[j].lower() in ls[i].lower():
-#             continue
-#         else:
-#             break
-#     else:
-#         print(ls[i])
-#
-# #   Negatives, Zeros and Positives
-# n, tmp = int(input()), 0
-# ls_zero, ls_minus, ls_plus = [], [], []
-# for _ in range(n):
-#     tmp = int(input())
-#     if tmp == 0:
-#         ls_zero.append(tmp)
-#     elif tmp < 0:
-#         ls_minus.append(tmp)
-#     elif tmp > 0:
-#         ls_plus.append(tmp)
-# print(*ls_minus,*ls_zero,*ls_plus, sep='\n')
 
+#   Google search - 2 🌶️🌶️
+n = int(input())
+ls = []
+ls_input = []
+for _ in range(n):
+    ls.append(input())
+n_search = int(input())
+for _ in range(n_search):
+    ls_input.append(input().lower())
+for i in range(len(ls)):
+    for j in range(len(ls_input)):
+        if ls_input[j].lower() in ls[i].lower():
+            continue
+        else:
+            break
+    else:
+        print(ls[i])
+
+#   Negatives, Zeros and Positives
+n, tmp = int(input()), 0
+ls_zero, ls_minus, ls_plus = [], [], []
+for _ in range(n):
+    tmp = int(input())
+    if tmp == 0:
+        ls_zero.append(tmp)
+    elif tmp < 0:
+        ls_minus.append(tmp)
+    elif tmp > 0:
+        ls_plus.append(tmp)
+print(*ls_minus,*ls_zero,*ls_plus, sep='\n')
+
+#   Windows OS
+'''
+Примечание. В Python символ \ обычно используется для создания специальных символьных последовательностей,
+которые представляют собой управляющие символы или экранированные последовательности. Например,
+\n представляет символ новой строки, \t представляет символ табуляции и так далее. Однако если символ \ 
+используется как часть строки, его следует экранировать, то есть использовать два обратных слэша \\
+'''
+s = input().split('\\')
+print(*s, sep='\n')

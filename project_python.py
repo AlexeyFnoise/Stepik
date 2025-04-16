@@ -1543,3 +1543,18 @@ print(*ls_minus,*ls_zero,*ls_plus, sep='\n')
 '''
 s = input().split('\\')
 print(*s, sep='\n')
+
+#Переставить min и max
+ls = input().split()
+for i in range(len(ls)):
+    ls[i] = int(ls[i])
+ls_min = ls.index(min(ls))
+ls_max = ls.index(max(ls))
+ls[ls_max], ls[ls_min] = ls[ls_min], ls[ls_max]
+print(*ls)
+
+#Количество артиклей
+s = input().lower()
+ls = s.split()
+count = ls.count('a') + ls.count('an') + ls.count('the')
+print(f'Общее количество артиклей: {count}')

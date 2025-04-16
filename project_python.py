@@ -1544,6 +1544,18 @@ print(*ls_minus,*ls_zero,*ls_plus, sep='\n')
 s = input().split('\\')
 print(*s, sep='\n')
 
+#Количество совпадающих пар
+s = input().split()
+count = 0
+for i in range(len(s)):
+    for j in range(i+1, len(s)):
+        if s[i] == s[j]:
+            count += 1
+else:
+    print(count)
+
+#11.6 Методы списков. Часть 2
+
 #Переставить min и max
 ls = input().split()
 for i in range(len(ls)):

@@ -1570,3 +1570,27 @@ s = input().lower()
 ls = s.split()
 count = ls.count('a') + ls.count('an') + ls.count('the')
 print(f'Общее количество артиклей: {count}')
+
+#Взлом Братства Стали 🌶️
+num_str = input()
+num_str = int(num_str[1:])
+s = ''
+ls = []
+#rstrip() метод строки, удаляет все пробелы в конце
+for i in range(num_str):
+    ls.append(str(input()))
+    s = ls[i]
+    if '#' in ls[i]:
+        s = s[:s.find('#')]
+    s = s.rstrip()
+    ls[i] = s
+print(*ls, sep='\n')
+
+#Сортировка чисел
+ls = input().split()
+for i in range(len(ls)):
+    ls[i] = int(ls[i])
+ls.sort()
+print(*ls)
+ls.sort(reverse=True)
+print(*ls)

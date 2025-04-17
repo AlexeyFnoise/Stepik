@@ -1594,3 +1594,43 @@ ls.sort()
 print(*ls)
 ls.sort(reverse=True)
 print(*ls)
+
+#11.7 Списочные выражения
+keywords = ['False', 'True', 'None', 'and', 'with', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'try', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'while', 'yield']
+
+#Перебираем список через for, i принимает значение элемента списка(в виде строки).
+#Далее обычный срез строки с 1 элемента строки до конца
+new_keywords = [i[1:] for i in keywords]
+
+print(new_keywords)
+
+#Используя списочное выражение, дополните приведённый ниже код так,
+# чтобы получить список всех чисел-палиндромов от 100 до 1000 (включительно).
+palindromes = [str(i) for i in range(100, 1001)]
+palindromes = [int(i) for i in palindromes if i == i[::-1]]
+print(palindromes)
+
+#Списочное выражение 1
+palindromes = [i ** 2 for i in range(1, int(input()) + 1)]
+print(*palindromes, sep='\n')
+
+#Списочное выражение 2
+ls = [int(el) ** 3 for el in input().split()]
+print(*ls)
+
+#В одну строку 1
+print(*[i for i in input().split()], sep='\n')
+
+#В одну строку 2
+#Работаем со строкой. Проверяем элемент строки на циферность через isgidit.
+#Если True, то собираем в список. Далее выводим список без пробелов через \n
+print(*[i for i in input() if i.isdigit()], sep='')
+
+#В одну строку 3
+# Собираем список из строки, при этом собираем квадраты четных чисел
+ls = [int(i) ** 2 for i in input().split() if int(i) % 2 == 0]
+#Шерстим созданный список
+for i in ls:
+    #Проверяем равна ли после последняя цифра 4, если нет, то выводим
+    if int(i) % 10 != 4:
+        print(i, end=' ')

@@ -1642,3 +1642,58 @@ while len(a):
     a_new.append(min(a))
     a.pop(a.index(min(a)))
 print(a_new)
+
+
+#13.1 Функции без параметров
+def draw_box():
+    for i in range(14):
+        if i != 0 and i != 13:
+            print('*' + ' ' * 8 + '*')
+        else:
+            print('*' * 10)
+draw_box()
+
+#Звёздный треугольник 1
+def draw_box():
+    for i in range(1, 11):
+        print(i * '*')
+
+draw_box()
+
+#Звёздный треугольник
+# объявление функции
+def draw_triangle(fill, base):
+    for i in range(1, (base // 2) + 2):
+        print(fill * i)
+    for i in range(base // 2, 0, -1):
+        print(fill * i)
+
+# считываем данные
+fill = input()
+base = int(input())
+
+# вызываем функцию
+draw_triangle(fill, base)
+
+#ФИО
+# объявление функции
+def print_fio(name, surname, patronymic):
+    print(surname[0].upper(), name[0].upper(), patronymic[0].upper(), sep='')
+
+# считываем данные
+name, surname, patronymic = input(), input(), input()
+
+# вызываем функцию
+print_fio(name, surname, patronymic)
+
+#Сумма цифр
+# объявление функции
+def print_digit_sum(num):
+    ls = [int(i) for i in str(num)]
+    print(sum(ls))
+
+# считываем данные
+n = int(input())
+
+# вызываем функцию
+print_digit_sum(n)

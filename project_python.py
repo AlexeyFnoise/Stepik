@@ -1686,3 +1686,14 @@ name, surname, patronymic = input(), input(), input()
 # вызываем функцию
 print_fio(name, surname, patronymic)
 
+#Сумма цифр
+# объявление функции
+def print_digit_sum(num):
+    ls = [int(i) for i in str(num)]
+    print(sum(ls))
+
+# считываем данные
+n = int(input())
+
+# вызываем функцию
+print_digit_sum(n)

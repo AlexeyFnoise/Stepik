@@ -1697,3 +1697,97 @@ n = int(input())
 
 # вызываем функцию
 print_digit_sum(n)
+
+#13.4 Функции с возвратом значения. Часть 1
+#Количество дней
+
+def get_days(month):
+    if month in [1, 3, 5, 7, 8, 10, 12]:
+        return 31
+    elif month in [4, 6, 9, 11]:
+        return 30
+    elif month == 2:
+        return 28
+
+n = int(input())
+print(get_days(n))
+
+#Делители 1
+# объявление функции
+def get_factors(num):
+    lis = []
+    for i in range(1, num // 2 + 1):
+        if num % i == 0:
+            lis.append(int(i))
+    lis.append(int(num))
+    return lis
+
+# считываем данные
+n = int(input())
+
+# вызываем функцию
+print(get_factors(n))
+
+
+#Делители 2
+def number_of_factors(num):
+    count = 0
+    for i in range(1, num // 2 + 1):
+        if num % i == 0:
+            count += 1
+    count += 1
+    return count
+
+# считываем данные
+n = int(input())
+
+# вызываем функцию
+print(number_of_factors(n))
+
+## Или !!!
+def number_of_factors(num):
+    return len(get_factors(num))
+
+# считываем данные
+n = int(input())
+# вызываем функцию
+print(number_of_factors(n))
+
+#Найти всех
+#Функция возвращает все вхождения заданного символа строки.
+def find_all(text, symbol):
+    lis = [int(i) for i in range(len(text)) if text[i] == symbol]
+    return lis
+
+# считываем данные
+s = input()
+char = input()
+
+# вызываем функцию
+print(find_all(s, char))
+
+#Merge lists 1
+def merge(lis1, lis2):
+    lis3 = lis1 + lis2
+    lis3.sort()
+    return lis3
+
+# считываем данные
+numbers1 = [int(c) for c in input().split()]
+numbers2 = [int(c) for c in input().split()]
+
+# вызываем функцию
+print(merge(numbers1, numbers2))
+
+#Merge lists 2
+def quick_merge(lis):
+    lis_main = []
+    for i in range(len(lis)):
+        for j in lis[i]:
+            lis_main.append(int(j))
+    lis_main.sort()
+    return lis_main
+
+n = int(input())
+lis_old = [input().split() for _ in range(n)]
+print(*quick_merge(lis_old))

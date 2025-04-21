@@ -1791,3 +1791,85 @@ def quick_merge(lis):
 n = int(input())
 lis_old = [input().split() for _ in range(n)]
 print(*quick_merge(lis_old))
+
+#Is the Triangle Valid?
+def is_valid_triangle(n1, n2, n3):
+    if (n1 + n2) > n3 and (n1 + n3) > n2 and (n2 + n3) > n1:
+        return True
+    else:
+        return False
+# считываем данные
+a, b, c = int(input()), int(input()), int(input())
+
+# вызываем функцию
+print(is_valid_triangle(a, b, c))
+
+#Is the Number Prime? 🌶️ Является ли число простым
+def is_prime(num):
+    if num <= 1:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    else:
+        return True
+# считываем данные
+n = int(input())
+
+# вызываем функцию
+print(is_prime(n))
+
+#Next Prime 🌶️🌶️
+# объявление функции
+def get_next_prime(num):
+    #Берем следующее число от заданого
+    nm = num + 1
+    while not is_prime(nm):
+        nm += 1
+    return nm
+# считываем данные
+n = int(input())
+# вызываем функцию
+print(get_next_prime(n))
+
+#Good password 🌶️
+# объявление функции
+def is_password_good(password):
+    if len(password) < 8:
+        return False
+    if password.lower() == password:
+        return False
+    if password.upper() == password:
+        return False
+    for i in password:
+        if i in '0123456789':
+            return True
+    else:
+            return False
+# считываем данные
+txt = input()
+
+# вызываем функцию
+print(is_password_good(txt))
+
+#Ровно в одном 1️⃣
+# объявление функции
+def is_one_away(word1, word2):
+    cont = 0
+    if len(word1) != len(word2):
+        return False
+    for i in range(len(word1)):
+        if word1[i] != word2[i]:
+            cont += 1
+    else:
+        if cont != 1:
+            return False
+        else:
+            return True
+
+# считываем данные
+txt1 = input()
+txt2 = input()
+
+# вызываем функцию
+print(is_one_away(txt1, txt2))

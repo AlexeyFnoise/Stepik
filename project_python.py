@@ -1873,3 +1873,57 @@ txt2 = input()
 
 # вызываем функцию
 print(is_one_away(txt1, txt2))
+
+#Палиндром 🌶️
+# объявление функции
+def is_palindrome(text):
+    #Собираем список всех букв строки, делая их в нижнем регистре
+    les = [i.lower() for i in text if i.isalpha()]
+    #Собираем новую строку из списка
+    s = ''.join(les)
+    #Сравниваем строку с перевернутой версией себя же
+    if s == s[::-1]:
+        return True
+    else:
+        return False
+
+
+# считываем данные
+txt = input()
+
+# вызываем функцию
+print(is_palindrome(txt))
+
+#Правильная скобочная последовательность 🌶️
+# объявление функции
+def is_correct_bracket(text):
+    while '()' in text:
+        text = text.replace('()', '')
+    return text == ''
+
+# считываем данные
+txt = input()
+
+# вызываем функцию
+print(is_correct_bracket(txt))
+
+#Змеиный регистр 🐍
+# объявление функции
+def convert_to_python_case(text):
+    s = ''
+    for i in range(len(text)):
+        if i == 0:
+            s += text[i].lower()
+            continue
+        if text[i].isupper() and i > 0:
+            s += '_' + text[i].lower()
+            continue
+        if text[i].islower() or text[i].isdigit():
+            s += text[i]
+    return s
+
+# считываем данные
+txt = input()
+
+# вызываем функцию
+print(convert_to_python_case(txt))

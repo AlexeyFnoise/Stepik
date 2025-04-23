@@ -1927,3 +1927,35 @@ txt = input()
 
 # вызываем функцию
 print(convert_to_python_case(txt))
+
+#13.6 Функции с возвратом значения. Часть 3
+# Середина отрезка
+# объявление функции
+def get_middle_point(x1, y1, x2, y2):
+    x = (x1 + x2) / 2
+    y = (y1 + y2) / 2
+    return x, y
+
+# считываем данные
+x_1, y_1 = int(input()), int(input())
+x_2, y_2 = int(input()), int(input())
+
+# вызываем функцию
+x, y = get_middle_point(x_1, y_1, x_2, y_2)
+print(x, y)
+
+#Площадь и длина 📏
+# объявление функции
+def get_circle(radius):
+   from math import pi
+   radius = float(radius)
+   c = 2 * pi * radius
+   s = pi * radius ** 2
+   return c, s
+
+# считываем данные
+r = float(input())
+
+# вызываем функцию
+length, square = get_circle(r)
+print(length, square)

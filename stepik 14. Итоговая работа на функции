@@ -1,0 +1,103 @@
+# # объявление функции
+# def draw_triangle():
+#     for i in range(1, 9):
+#         s = ' ' * (8 - i) + '*' * (i + (i - 1))
+#         print(s)
+#
+#
+# # основная программа
+# draw_triangle()  # вызов функции
+
+# # объявление функции
+# def get_shipping_cost(quantity):
+#     sel = 1000
+#     if quantity > 1: sel = sel + 120 * (quantity - 1)
+#     if quantity == 1: return 1000
+#     else: return sel
+#
+# # считываем данные
+# n = int(input())
+#
+# # вызываем функцию
+# print(get_shipping_cost(n))
+
+# # объявление функции
+# import math
+# def compute_binom(n, k):
+#     return int(math.factorial(n) / (math.factorial(k) * math.factorial(n - k)))
+#
+# # считываем данные
+# n = int(input())
+# k = int(input())
+#
+# # вызываем функцию
+# print(compute_binom(n, k))
+
+# # объявление функции
+# def number_to_words(num):
+#     num1 = ['ноль','один', 'два', 'три', 'четыре', 'пять', 'шесть', 'семь', 'восемь', 'девять', 'десять']
+#     num11 = [11, 'одиннадцать', 12, 'двенадцать', 13, 'тринадцать', 14, 'четырнадцать',
+#              15, 'пятнадцать', 16, 'шестнадцать', 17, 'семнадцать', 18, 'восемнадцать', 19, 'девятнадцать', 20, 'двадцать']
+#     num2 = [2, 'двадцать', 3, 'тридцать', 4, 'сорок', 5, 'пятьдесят',
+#             6, 'шестьдесят', 7, 'семьдесят', 8, 'восемьдесят', 9, 'девяносто']
+#     if num in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]:
+#         res = num1[num]
+#     elif 11 <= num <= 20:
+#         res = num11[num11.index(num) + 1]
+#     elif num % 10 == 0:
+#         res = num2[num2.index(num // 10) + 1]
+#     elif 20 <= num <= 99:
+#         n1 = num // 10
+#         n2 = num % 10
+#         res = str(num2[num2.index(n1) + 1]) + ' ' + str(num1[n2])
+#     return res
+#
+# # считываем данные
+# n = int(input())
+#
+# # вызываем функцию
+# print(number_to_words(n))
+
+# # объявление функции
+# def get_month(language, number):
+#     ru_month = ['', 1, 'январь', 2, 'февраль', 3, 'март', 4, 'апрель', 5, 'май', 6, 'июнь', 7, 'июль',
+#                 8, 'август', 9, 'сентябрь', 10, 'октябрь', 11, 'ноябрь', 12, 'декабрь']
+#     en_month = ['', 1, 'January', 2, 'February', 3, 'March', 4, 'April', 5, 'May', 6, 'June',
+#                 7, 'July', 8, 'August', 9, 'September', 10, 'October', 11, 'November', 12, 'December']
+#     if language == 'ru': s = str(ru_month[ru_month.index(number) + 1])
+#     if language == 'en': s = str(en_month[ru_month.index(number) + 1])
+#     s = s.lower()
+#     return s
+#
+# # считываем данные
+# lan = input()
+# num = int(input())
+#
+# # вызываем функцию
+# print(get_month(lan, num))
+
+# # объявление функции
+# def is_magic(date):
+#     s = str(date)
+#     ls = s.split('.')
+#     tmp = int(ls[0]) * int(ls[1])
+#     return tmp == int(ls[2][2:])
+#
+#
+# # считываем данные
+# date = input()
+#
+# # вызываем функцию
+# print(is_magic(date))
+
+# # объявление функции
+# def is_pangram(text):
+#     ls = set(text.lower())
+#     return len(ls) > 26
+#
+# # считываем данные
+# text = input()
+#
+# # вызываем функцию
+# print(is_pangram(text))
+

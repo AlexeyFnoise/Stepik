@@ -1076,6 +1076,7 @@ for i in range(len(s)):
     else:
         s1 += chr(ord(s[i]) - step)
 print(s1)
+
 # Решение от курса +
 # n = int(input())
 # s = input()
@@ -1982,3 +1983,22 @@ a, b, c = float(input()), float(input()), float(input())
 x1, x2 = solve(a, b, c)
 print(x1, x2)
 
+####   Аве, Цезарь 🌶️
+ls = input().split()
+s = ''
+for i in ls:
+    long = 0
+    word = ''
+    s_temp = str(i)
+    direction = 'шифровать'
+    language = 'английский'
+    for k in i:
+        if k.isalpha(): word += k
+        long = len(word)
+    for j in i:
+        if j.isalpha() and j.islower(): s += chr((ord(j) - 97 + long) % 26 + 97)
+        elif j.isalpha() and j.isupper(): s+= chr((ord(j) - 65 + long) % 26 + 65)
+        else: s += j
+    s += ' '
+s = s.rstrip()
+print(s)
